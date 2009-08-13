@@ -1,28 +1,30 @@
+Feedreader
+----------
+
 A universal feed parser designed to operate on top of the lxml interface.
 
 This is a VERY rough readme, and this project is very early in development. It however, is used to power Lifestrm.com.
 
-Our Mission
-===========
+Our mission was simple:
 
 - Don't write an XML parser (we use lxml)
 - Keep it transparent, but allow easy access to underlying objects.
 - Support as many services as possible, and make accessing their media easy.
 
 Features
-========
+--------
 
 - RSS 2.0 (incl. media enclosures)
 - Atom 1.0 (incl. link enclosures)
 
 Installation
-============
+------------
 
 - http://codespeak.net/lxml/
 - http://labix.org/python-dateutil
 
 Usage
-=====
+-----
 
 There are several methods which are usable to parse a feed::
 
