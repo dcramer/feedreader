@@ -15,7 +15,7 @@ feeds = (RSS20Feed, Atom10Feed)
 
 ACCEPT_HEADER = "application/atom+xml,application/rdf+xml,application/rss+xml,application/x-netcdf,application/xml;q=0.9,text/xml;q=0.2,*/*;q=0.1"
 
-USER_AGENT = 'py-feedparser'
+USER_AGENT = 'py-feedreader'
 
 class ParseError(Exception): pass
 
