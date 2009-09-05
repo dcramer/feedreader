@@ -14,7 +14,7 @@ setup(
         'lxml',
         'python-dateutil',
     ],
-    description = 'An identify mapper for the Django ORM',
+    description = 'A generic RSS/Atom feedparser.',
     packages=find_packages(),
     include_package_data=True,
 )
