@@ -6,7 +6,7 @@ import feedreader
 
 setup(
     name='feedreader',
-    version=".".join(map(str, idmapper.__version__)),
+    version=".".join(map(str, feedreader.__version__)),
     author='David Cramer',
     author_email='dcramer@gmail.com',
     url='http://github.com/dcramer/feedreader',

@@ -2,14 +2,14 @@ import lxml.objectify
 import httplib
 import urlparse
 
-from feedreader.utils.dates import *
-from feedreader.feeds import InvalidFeed
+from utils.dates import *
+from feeds import InvalidFeed
 
 __all__ = ('ParseError', 'InvalidFeed', 'from_string', 'from_url', 'from_file', 'parse_date')
 
 # TODO: change the feeds to a registration model
-from feedreader.feeds.atom10 import Atom10Feed
-from feedreader.feeds.rss20 import RSS20Feed
+from feeds.atom10 import Atom10Feed
+from feeds.rss20 import RSS20Feed
 
 feeds = (RSS20Feed, Atom10Feed)
 
