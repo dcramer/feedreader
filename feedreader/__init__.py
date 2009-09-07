@@ -27,5 +27,3 @@ def get_revision():
     return None
 
 __build__ = get_revision()
-
-from feedreader import *

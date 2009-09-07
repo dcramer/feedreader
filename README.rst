@@ -28,13 +28,13 @@ Usage
 
 There are several methods which are usable to parse a feed::
 
-	from feedreader import from_url
+	from feedreader.parser import from_url
 	parsed = from_url('http://www.domain.com/rss.xml')
 
-	from feedreader import from_string
+	from feedreader.parser import from_string
 	parsed = from_string(open('my.rss', 'r').read())
 
-	from feedreader import from_file
+	from feedreader.parser import from_file
 	parsed = from_file(open('my.rss', 'r'))
 
 Once you have initialized the parser, you will be able to access supported elements
