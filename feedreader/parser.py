@@ -55,7 +55,9 @@ def from_url(url, **kwargs):
     connection = conn(url.hostname)
     method = kwargs.pop('method', 'GET').upper()
     if method == 'GET':
-        path, query = url.path + '?' + url.query, ''
+        path, query = url.path, ''
+        if url.query:
+            path += '?' + url.query
     else:
         path, query = url.path, url.query
     connection.request(method, path, query, headers)
