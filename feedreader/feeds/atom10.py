@@ -14,8 +14,8 @@ class Atom10Item(Item):
     
     def _process_links(self):
         self._enclosures = []
-        for link in self._xml.iterchildren(tag='link'):
-            if link.attrib['rel'] == 'alternate':
+        for link in self._xml.iterchildren(tag='{http://www.w3.org/2005/Atom}link'):
+            if link.attrib.get('rel', 'alternate') == 'alternate':
                 self._link = link.attrib['href']
             elif link.attrib['rel'] == 'enclosure':
                 if link.attrib['type'].startswith('image/'):
@@ -51,7 +51,7 @@ class Atom10Item(Item):
     
     @property
     def description(self):
-        return unicode(self._xml.description).strip()
+        return unicode(self._xml.content).strip()
     
     @property
     def published(self):
