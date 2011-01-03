@@ -67,5 +67,8 @@ def from_url(url, **kwargs):
         raise ParseError('Bad status line: %s' % (exc,))
     
     if response.status != 200:
+        if response.status in (301, 302):
+            return from_url(response.getheader('location'), **kwargs)
         raise ParseError('%s %s' % (response.status, response.reason))
+
     return from_file(response, base_url=base_url)
