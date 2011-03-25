@@ -85,7 +85,7 @@ class Atom10Feed(Feed):
     def published(self):
         if self._published is None:
             try:
-                datestr = self._xml.feed.published
+                datestr = self._xml.published
             except AttributeError:
                 self._published = self.updated
             else:
@@ -96,7 +96,7 @@ class Atom10Feed(Feed):
     def updated(self):
         if self._updated is None:
             try:
-                datestr = self._xml.feed.updated
+                datestr = self._xml.updated
             except AttributeError:
                 self._updated = None
             else:
